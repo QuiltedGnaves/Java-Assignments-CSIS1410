@@ -1,16 +1,35 @@
+/*
+ * Dax Allen
+ * CSIS 1410
+ * Section 402
+ */
 package a09ListVsSet;
 
 import java.awt.Color;
 
+/**
+ * Creates a ColoredSquare object with a side length and color property
+ * @author Dax Allen
+ *
+ */
 public class ColoredSquare {
 	int side;
 	Color color;
 	
+	/**
+	 * Contructor
+	 * @param s int side length
+	 * @param c Color object
+	 */
 	public ColoredSquare(int s, Color c) {
 		this.side = s;
 		this.color = c;
 	}
 	
+	/**
+	 * Calculates the area for the square
+	 * @return int area of square
+	 */
 	public int area() {
 		return this.side * this.side;
 	}
