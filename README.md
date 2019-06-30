@@ -1,0 +1,1 @@
+This is a repo to store and showcase my Java assignments from CSIS 1410
