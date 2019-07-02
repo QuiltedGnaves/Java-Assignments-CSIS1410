@@ -149,7 +149,7 @@ public class DemoWrapperClassGui extends JFrame {
         textFieldChar.addActionListener(new ActionListener() {
         	@Override
         	public void actionPerformed(ActionEvent e) {
-        		charTextArea.setText(dwc.charProperties(textFieldChar.getText().charAt(0)));
+        		charTextArea.setText((textFieldChar.getText().isEmpty()) ? "No input to display" : dwc.charProperties(textFieldChar.getText().charAt(0)));
         	}
         });
         charControlPanel.add(textFieldChar);
