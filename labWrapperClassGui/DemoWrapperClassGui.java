@@ -46,6 +46,7 @@ public class DemoWrapperClassGui extends JFrame {
     private JRadioButton rdbtnMinMax;
     private JRadioButton rdbtnBinaryOctHex;
     private final ButtonGroup buttonGroup_1 = new ButtonGroup();
+    DemoWrapperClass dwc = new DemoWrapperClass();
 
     /**
      * Launch the application.
@@ -102,8 +103,6 @@ public class DemoWrapperClassGui extends JFrame {
 
     private void createNumberControlPanel() {
     	
-    	DemoWrapperClass dwc = new DemoWrapperClass();
-    	
         numberControlPanel = new JPanel();
         numberControlPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
         numberControlPanel.setLayout(new GridLayout(12, 1, 0, 0));
@@ -139,8 +138,6 @@ public class DemoWrapperClassGui extends JFrame {
     }
 
     private void createCharControlPanel() {
-    	
-    	DemoWrapperClass dwc = new DemoWrapperClass();
     	
         charControlPanel = new JPanel();
         charControlPanel.setBackground(SystemColor.controlHighlight);
