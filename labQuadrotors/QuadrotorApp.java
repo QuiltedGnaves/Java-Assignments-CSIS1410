@@ -8,13 +8,12 @@ public class QuadrotorApp {
 
 	public static void main(String[] args) {
 		
-		List<Quadrotor> rotors = new ArrayList(Arrays.asList(
+		List<Quadrotor> rotors = new ArrayList<>(Arrays.asList(
 				new Quadrotor(2,4,2), new Quadrotor(3,4,4), new Quadrotor(4,4,6),
 				new Quadrotor(5,4,2), new Quadrotor(6,4,4), new Quadrotor(7,4,6)));
 		Quadrotor searchItem = new Quadrotor(4,6,4);
 		
 		System.out.println(rotors);
-		System.out.println();
 		
 		changeOrientation(rotors);
 		
@@ -22,10 +21,12 @@ public class QuadrotorApp {
 		System.out.println();
 		
 		if (rotors.contains(searchItem)) {
-			System.out.println("rotors does contain " + rotors.get(rotors.indexOf(searchItem)));
+			System.out.printf("rotors does contain %s%n", searchItem);
+		} else {
+			System.out.printf("rotors does not contain %s%n", searchItem);
 		}
 		
-		System.out.println("Number of rotors: " + rotors.size());
+		System.out.printf("Number of rotors: %d%n", rotors.size());
 		System.out.println();
 		
 		rotors.remove(searchItem);
@@ -41,9 +42,7 @@ public class QuadrotorApp {
 		
 		for (Quadrotor el : rotorList) {
 			int x = el.getX();
-			int y = el.getY();
-			
-			el.setX(y);
+			el.setX(el.getY());
 			el.setY(x);
 		}
 	}
