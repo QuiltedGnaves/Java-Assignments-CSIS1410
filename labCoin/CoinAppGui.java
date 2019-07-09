@@ -7,6 +7,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -92,6 +94,19 @@ public class CoinAppGui extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				lblData.setText(coin.toString());
 			}
+		});
+		btnCent.getModel().addChangeListener(new ChangeListener() {
+
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				if (btnCent.getModel().isRollover()) {
+					btnCent.setBorderPainted(true);
+				} else {
+					btnCent.setBorderPainted(false);
+				}
+				
+			}
+			
 		});
 		btnCent.setOpaque(false);
 		btnCent.setBorderPainted(false);
