@@ -17,7 +17,7 @@ public enum Coin {
 	
 	@Override
 	public String toString() {
-		return String.format("%s w:%.3fg d:%.3fmm%n", this.name(), this.weight, this.diameter);
+		return String.format("%s w:%.1fg d:%.1fmm%n", this.name(), this.weight, this.diameter);
 	}
 
 }

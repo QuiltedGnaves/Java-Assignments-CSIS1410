@@ -71,44 +71,34 @@ public class CoinAppGui extends JFrame {
 	private JPanel controlPanel() {
 		JPanel panelControl = new JPanel();
 		
-		JButton btnCent = new JButton("");
-		btnCent.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblData.setText(Coin.CENT.toString());
-			}
-		});
-		btnCent.setOpaque(false);
-		btnCent.setIcon(new ImageIcon(CoinAppGui.class.getResource("/labCoin/UsCent.png")));
+		JButton btnCent = btnCoin("Cent", Coin.CENT);
 		panelControl.add(btnCent);
 		
-		JButton btnNickel = new JButton("");
-		btnNickel.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblData.setText(Coin.NICKEL.toString());
-			}
-		});
-		btnNickel.setIcon(new ImageIcon(CoinAppGui.class.getResource("/labCoin/UsNickel.png")));
+		JButton btnNickel = btnCoin("Nickel", Coin.NICKEL);
 		panelControl.add(btnNickel);
 		
-		JButton btnDime = new JButton("");
-		btnDime.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblData.setText(Coin.DIME.toString());
-			}
-		});
-		btnDime.setIcon(new ImageIcon(CoinAppGui.class.getResource("/labCoin/UsDime.png")));
+		JButton btnDime = btnCoin("Dime", Coin.DIME);
 		panelControl.add(btnDime);
 		
-		JButton btnQuarter = new JButton("");
-		btnQuarter.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				lblData.setText(Coin.QUARTER.toString());
-			}
-		});
-		btnQuarter.setIcon(new ImageIcon(CoinAppGui.class.getResource("/labCoin/UsQuarter.png")));
+		JButton btnQuarter = btnCoin("Quarter", Coin.QUARTER);
 		panelControl.add(btnQuarter);
 		
 		return panelControl;
+	}
+
+	private JButton btnCoin(String denom, Coin coin) {
+		JButton btnCent = new JButton("");
+		btnCent.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblData.setText(coin.toString());
+			}
+		});
+		btnCent.setOpaque(false);
+		btnCent.setBorderPainted(false);
+		btnCent.setFocusPainted(false);
+		btnCent.setContentAreaFilled(false);
+		btnCent.setIcon(new ImageIcon(CoinAppGui.class.getResource("/labCoin/Us" + denom + ".png")));
+		return btnCent;
 	}
 
 }
