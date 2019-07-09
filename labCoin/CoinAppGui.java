@@ -44,11 +44,11 @@ public class CoinAppGui extends JFrame {
 	 */
 	public CoinAppGui() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 550, 500);
+		setBounds(100, 100, 550, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
-		contentPane.setPreferredSize(new Dimension(500, 500));
+		contentPane.setPreferredSize(new Dimension(500, 300));
 		setContentPane(contentPane);
 		
 		JPanel panelControl = controlPanel();
@@ -96,17 +96,14 @@ public class CoinAppGui extends JFrame {
 			}
 		});
 		btnCent.getModel().addChangeListener(new ChangeListener() {
-
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				if (btnCent.getModel().isRollover()) {
 					btnCent.setBorderPainted(true);
 				} else {
 					btnCent.setBorderPainted(false);
-				}
-				
-			}
-			
+				}	
+			}	
 		});
 		btnCent.setOpaque(false);
 		btnCent.setBorderPainted(false);
