@@ -12,6 +12,7 @@ public class Pair2App {
 		KeyValuePair2<String, Integer> p2 = new KeyValuePair2<String, Integer>("NY", 8244910);
 		KeyValuePair2<String, Integer> p3 = new KeyValuePair2<String, Integer>("LA", 3819702);
 		KeyValuePair2<String, Integer> p4 = new KeyValuePair2<String, Integer>("SF", 812826);
+		KeyValuePair2<String, Integer> p5 = new KeyValuePair2<String, Integer>("SLC", 289899);
 		
 		List<KeyValuePair2<?,?>> cities = new ArrayList<>();
 		
@@ -19,6 +20,7 @@ public class Pair2App {
 		cities.add(p2);
 		cities.add(p3);
 		cities.add(p4);
+		cities.add(p5);
 		
 		System.out.println("Original List:");
 		for (KeyValuePair2 el : cities) {
