@@ -77,7 +77,7 @@ public class KeyValuePair2 < K extends Comparable<K>, V > implements Comparable<
 	@Override
 	public int compareTo(KeyValuePair2<K, V> o) {
 		
-		return ((this.key.compareTo(o.key)) <= -1) ? -1 : ((this.key.compareTo(o.key)) >= 1) ? 1 : 0;
+		return this.key.compareTo(o.key);
 	}
 	
 	
