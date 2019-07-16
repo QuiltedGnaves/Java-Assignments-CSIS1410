@@ -26,11 +26,11 @@ public class LabExceptionHandilng
 			try {
 				returnVal = input.nextInt();
 				if (returnVal == 0) {
-					throw new IllegalArgumentException();
+					throw new IllegalArgumentException("You cannot divide by 0.");
 				}
 				valid = true;
 			} catch (InputMismatchException|IllegalArgumentException e) {
-				System.out.println("A problem occurred: " + e + "\nThe number entered needs to be a whole non-zero number.");
+				System.out.println("A problem occurred: " + e + "\nThe number entered needs to be a whole non-zero number.\n");
 			}
 			input.nextLine();
 		} while (!valid);
