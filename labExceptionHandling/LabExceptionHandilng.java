@@ -30,7 +30,7 @@ public class LabExceptionHandilng
 				}
 				valid = true;
 			} catch (InputMismatchException|IllegalArgumentException e) {
-				System.out.println("The number entered needs to be a whole non-zero number.");
+				System.out.println("A problem occurred: " + e + "\nThe number entered needs to be a whole non-zero number.");
 			}
 			input.nextLine();
 		} while (!valid);
