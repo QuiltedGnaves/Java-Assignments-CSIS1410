@@ -8,10 +8,10 @@ public class MountainApp {
 	public static void main(String[] args) {
 		
 		List<Mountain> mountainList = new LinkedList<>();
+		Mountain temp;
 		
 		try (Scanner scan = new Scanner(MountainApp.class.getResourceAsStream("Mountains.csv"))) {
 			while (scan.hasNextLine()) {
-				Mountain temp;
 				if ((temp = getMountain(scan.nextLine())) != null) {
 					mountainList.add(temp);
 				}
