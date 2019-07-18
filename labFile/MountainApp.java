@@ -6,13 +6,14 @@ import java.util.Scanner;
 
 public class MountainApp {
 	public static void main(String[] args) {
+		
 		List<Mountain> mountainList = new LinkedList<>();
 		
 		try (Scanner scan = new Scanner(MountainApp.class.getResourceAsStream("Mountains.csv"))) {
 			while (scan.hasNextLine()) {
-				Mountain mountain = getMountain(scan.nextLine());
-				if (mountain != null) {
-					mountainList.add(mountain);
+				Mountain temp;
+				if ((temp = getMountain(scan.nextLine())) != null) {
+					mountainList.add(temp);
 				}
 				
 			}
