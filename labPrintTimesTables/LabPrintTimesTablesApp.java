@@ -22,13 +22,13 @@ public class LabPrintTimesTablesApp {
 		
 		try (PrintWriter pW = new PrintWriter(timesTablesFile)) {
 			
+			pW.println("Times Tables:\n");
 			for (int i = 1; i <= 10; i += 2) {
 				for (int j = 1; j <= 10; j++) {
-					pW.printf((i == 10 || j ==10) ? "%2d * %d = %-9d %d * %d = %d%n" : "%2d * %d = %-10d %d * %d = %d%n", j, i, (i * j), j, i+1, ((i+1) * j));
+					pW.printf("%3d * %d = %-3d \t\t %3d * %d = %-3d%n", j, i, (i * j), j, i+1, (i+1) * j);
 				}
 				pW.println();
 			}
-			pW.close();
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
